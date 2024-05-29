@@ -1,0 +1,28 @@
+=> In my (Huffman Coding) solution, I used "Tree" data structure, because:
+
+	1- when I reach the least two repeated chars and merge them then add product in the tree again, I need it to be put in the right place to repeat the comprasion.
+	2- I need to know if some data is in the right or in the left to make decision if it will add "0" or "1" to the code.
+
+=> I used dictionaries to decrease the time of the process to reach some node.
+
+=> The complexity of time:
+
+	 1-  The first function most effective part on the complexity of time is under the while loop (because the first part that collects characters takes linear time):
+	 ... sorting process checks all nodes, that means linear time, also adding to the tree takes linear time, so we still at the worst case have a linear time complexity,
+	 ... but this while loop is repeating those lines (n) times, so now the while loop made the first function takes (n squared) time complexity.
+
+	 2-  The second function most effective part on the complexity of time is under the while loop:
+	 ... as these lines of code will run once for each integer of the data provided, so this function takes a linear time complexity.
+ 
+=> The complexity of capacity:
+
+	1-  Set function is the only which adds to the capacity, and the size of the input don't affect the size of capacity been used,
+	... so it takes constant capacity whatever was the size or the type of the input,
+	... then as for the first function, it has two of trees, dictionaries, and lists, all of them at worst case will include (n) of data
+	... so it takes linear capacity complexity.
+	... the capacity of code produced also depends on the length of data (n) where n is the number of characters in the data provided.
+	
+	2-  The second function, considering the size of the data provided ( the code ) as (n), in a linear capacity complexity, as it stores 
+	... codes of nodes in a tree and the size of the input data depends on the size of the tree then the size of the dictionary has a linear
+ 	... relationship with the size of the data provided (code).
+	... the loop include the output string which also depends on the size of the input data.
